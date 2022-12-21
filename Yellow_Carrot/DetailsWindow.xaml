@@ -1,0 +1,215 @@
+﻿<Window x:Class="Yellow_Carrot.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yellow_Carrot"
+        mc:Ignorable="d"
+        Title="DetailsWindow" Height="450" Width="800">
+    <Grid Margin="0" Background="SlateGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label
+            x:Name="lblRecipe"
+            Grid.Column="0"
+            Grid.Row="0"
+            Content="Recipe Name:"
+            FontSize="20"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"/>
+
+      
+
+        <Label
+            x:Name="lblTags"
+            Grid.Column="0"
+            Grid.Row="4"
+            Content="Tags:"
+            FontSize="20"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"/>
+
+        
+        <Label
+            x:Name="lblInredients"
+            Grid.Column="0"
+            Grid.Row="1"
+            Content="Ingredients:"
+            FontSize="20"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"/>
+        <TextBox
+            x:Name="txtRecipeName"
+            Grid.Column="1"
+            Grid.Row="0"
+            Width="130"
+            VerticalContentAlignment="Center" 
+            IsEnabled="false"
+            Height="30"
+            />
+
+        <TextBox
+            
+            x:Name="txtNewIngredient"
+            Grid.Column="3"
+            Grid.Row="1"
+            Width="130"
+            Margin="10"
+            
+            VerticalContentAlignment="Center" 
+            IsEnabled="false"
+            Height="30"
+            />
+
+        <TextBox
+            
+            x:Name="txtQuantity"
+            Grid.Column="4"
+            Grid.Row="1"
+            Width="130"
+            Margin="10"
+            
+            VerticalContentAlignment="Center" 
+            IsEnabled="false"
+            Height="30"
+            />
+
+
+
+
+
+
+
+        <ListView 
+            x:Name="lvTags"
+            Grid.Column="1"
+            Grid.Row="4"
+            Grid.RowSpan="1"
+            Width="130"
+            Height="30"
+            FontSize="15"
+            VerticalAlignment="Center"
+            IsEnabled="false"
+           />
+
+       
+        <CheckBox
+            x:Name="xbAllInclusive"
+            Grid.Column="2"
+            Grid.Row="3"
+            Visibility="Hidden"
+            FontSize="15"
+            VerticalAlignment="Center"
+            IsEnabled="false"
+            
+            >
+            <TextBlock>
+				 All Inclusive
+            </TextBlock>
+        </CheckBox>
+
+
+        <ListView 
+            x:Name="lvIngredients"
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Margin="10"
+            Height="155"
+            Width="130"
+            
+            IsEnabled="false"
+            />
+        <Button
+            
+            x:Name="btnUnlock"
+            Grid.Column="0"
+            Grid.Row="6"
+            Content="Unlock 🔓︎"
+            Margin="10"
+            FontSize="15"
+            FontWeight="Bold" Click="btnUnlock_Click" 
+            
+            
+            
+            />
+
+        <Button
+            
+            x:Name="btnSave"
+            Grid.Column="1"
+            Grid.Row="6"
+            Content="Save"
+            Margin="10"
+            FontSize="15"
+            FontWeight="Bold"
+            IsEnabled="false" Click="btnSave_Click" 
+            
+            />
+        <Button
+            
+            x:Name="btnAddIngredient"
+            Grid.Column="2"
+            Grid.Row="1"
+            Content="Add Ingredient"
+            Height="30"
+            Width="140"
+            FontSize="12"
+            FontWeight="Bold" 
+            IsEnabled="false" 
+            Click="btnAddIngredient_Click"
+            
+            />
+
+        <Button
+            
+            x:Name="btnRemoveIngredient"
+            Grid.Column="2"
+            Grid.Row="2"
+            Content="Remove Ingredient"
+            Height="30"
+            Width="140"
+            FontSize="12"
+            FontWeight="Bold"
+            IsEnabled="false" Click="btnRemoveIngredient_Click"
+            
+            />
+        <Button
+            
+            x:Name="btnExit"
+            Grid.Column="6"
+            Grid.Row="6"
+            Content="Back"
+            Margin="10"
+            FontSize="15"
+            FontWeight="Bold" 
+            
+            Click="btnExit_Click"
+            Visibility="Hidden"
+            
+            />
+
+
+        <Label
+            x:Name="lblWarning"
+            Grid.Column="1"
+            Grid.Row="6"
+            Foreground="Red"
+            Visibility="Hidden"
+            FontSize="20"/>
+    </Grid>
+</Window>
